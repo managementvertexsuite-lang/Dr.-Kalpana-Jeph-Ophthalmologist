@@ -17,7 +17,8 @@
   align-items: center;
 }
 
-.topbar-left, .topbar-right {
+.topbar-left,
+.topbar-right {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -159,7 +160,7 @@
 .hero-title span {
   color: var(--primary);
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -698,7 +699,8 @@
   transition: var(--transition);
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active {
   background-color: var(--primary-light);
   color: var(--primary);
   border-color: var(--primary);
@@ -809,7 +811,8 @@
 .footer {
   background-color: var(--primary-dark);
   color: var(--text-white);
-  padding: 60px 0 120px 0; /* Add bottom padding to prevent overlap with floating CTA */
+  padding: 60px 0 120px 0;
+  /* Add bottom padding to prevent overlap with floating CTA */
   border-top: 4px solid var(--secondary);
 }
 
@@ -934,26 +937,33 @@
     text-align: center;
     gap: 50px;
   }
+
   .hero-left {
     align-items: center;
   }
+
   .hero-badge {
     align-self: center;
   }
+
   .hero-credentials {
     justify-content: center;
   }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .stats {
     margin-top: 0;
     padding: 60px 0 20px 0;
   }
+
   .booking-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .doctor-img-container {
     max-width: 360px;
     height: 360px;
@@ -964,54 +974,69 @@
   .topbar {
     display: none;
   }
+
   .hero-title {
     font-size: 2.4rem;
   }
+
   .hero-actions {
     flex-direction: column;
     width: 100%;
     max-width: 320px;
   }
+
   .nav {
-    display: none; /* In full implementation we toggled it or drawer */
+    display: none;
+    /* In full implementation we toggled it or drawer */
   }
+
   .mobile-menu-btn {
     display: block;
   }
+
   .floating-cta {
     width: 95%;
     padding: 8px 12px;
   }
+
   .floating-item {
     font-size: 0.85rem;
     padding: 6px 8px;
     gap: 8px;
   }
+
   .floating-icon {
     width: 30px;
     height: 30px;
   }
+
   .form-group-row {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .booking-card {
     padding: 24px;
   }
+
   .admin-card {
     padding: 24px;
   }
+
   .dashboard-controls {
     flex-direction: column;
     align-items: stretch;
   }
+
   .search-input {
     max-width: 100%;
   }
+
   .filter-btn-group {
     overflow-x: auto;
     padding-bottom: 6px;
   }
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
@@ -1022,30 +1047,38 @@
   .stats-grid {
     grid-template-columns: 1fr;
   }
+
   .hero-title {
     font-size: 2rem;
   }
+
   .doctor-img-container {
     max-width: 280px;
     height: 280px;
   }
+
   .experience-badge-floating {
     left: 0;
     padding: 10px 14px;
   }
+
   .exp-num {
     font-size: 1.8rem;
   }
+
   .floating-cta {
     border-radius: 20px;
   }
+
   .floating-divider {
     display: none;
   }
+
   .floating-cta {
     flex-direction: column;
     gap: 8px;
   }
+
   .floating-item {
     width: 100%;
     justify-content: center;

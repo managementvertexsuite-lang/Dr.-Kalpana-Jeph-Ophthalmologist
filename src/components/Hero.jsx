@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Hero = () => {
   const handleScroll = (id) => {
     const element = document.getElementById(id);

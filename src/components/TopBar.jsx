@@ -1,5 +1,3 @@
-import React from 'react';
-
 const TopBar = () => {
   return (
     <div className="topbar">
@@ -16,7 +14,7 @@ const TopBar = () => {
               <circle cx="12" cy="12" r="10"/>
               <polyline points="12 6 12 12 16 14"/>
             </svg>
-            <span>Hours: 7:00 AM to 9:00 PM</span>
+            <span>Hours: 11:30 AM to 6:00 PM</span>
           </div>
         </div>
         
@@ -29,7 +27,7 @@ const TopBar = () => {
             <span>Focus Eye Care, Durg</span>
           </div>
           <div className="topbar-item">
-            <span style={{ cursor: 'pointer', color: 'var(--secondary)' }} className="topbar-link">English</span>
+            <span style={{ cursor: 'pointer', color: 'var(--secondary)' }} className="topbar-link"></span>
           </div>
         </div>
       </div>

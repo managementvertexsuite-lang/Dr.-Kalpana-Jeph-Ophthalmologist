@@ -438,15 +438,15 @@
 }
 
 .service-icon-wrapper {
-  width: 55px;
-  height: 55px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-md);
   background-color: var(--primary-light);
   color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .service-card h3 {
@@ -480,7 +480,11 @@
 .service-features li svg {
   color: var(--success);
 }
-
+.service-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
 /* ==========================================
    BOOKING FORM SECTION
    ========================================== */
@@ -1083,4 +1087,13 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+.service-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
 }

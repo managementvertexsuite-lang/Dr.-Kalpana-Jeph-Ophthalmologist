@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const DoctorDashboard = () => {
   const [appointments, setAppointments] = useState([]);
@@ -35,9 +35,13 @@ const DoctorDashboard = () => {
   };
 
   useEffect(() => {
-    if (isUnlocked) {
-      fetchAppointments();
-    }
+    if (!isUnlocked) return;
+
+    const loadAppointments = async () => {
+      await fetchAppointments();
+    };
+
+    loadAppointments();
   }, [isUnlocked]);
 
   const handleUnlock = (e) => {

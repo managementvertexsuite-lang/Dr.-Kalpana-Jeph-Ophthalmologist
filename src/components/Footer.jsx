@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = ({ onAdminToggle, showAdmin }) => {
   const handleScroll = (id) => {
     if (showAdmin) {
@@ -16,9 +14,6 @@ const Footer = ({ onAdminToggle, showAdmin }) => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-column">
-            <h2 className="footer-logo">
-              focus<span>eye care</span>
-            </h2>
             <p>
               Under Dr. Kalpana Jeph (MBBS, MS, Ex-AIIMS Raipur), Focus Eye Care is committed to preserving and enhancing vision through advanced ophthalmic technology and surgical excellence in Durg, India.
             </p>
@@ -51,12 +46,12 @@ const Footer = ({ onAdminToggle, showAdmin }) => {
                 </a>
               </li>
               <li>
-                <button 
-                  onClick={() => onAdminToggle(!showAdmin)} 
-                  style={{ 
-                    background: 'none', 
-                    border: 'none', 
-                    color: '#cbd5e1', 
+                <button
+                  onClick={() => onAdminToggle(!showAdmin)}
+                  style={{
+                    background: 'none',
+                    border: 'none',
+                    color: '#cbd5e1',
                     cursor: 'pointer',
                     fontSize: '0.9rem',
                     textAlign: 'left'
@@ -110,8 +105,8 @@ const Footer = ({ onAdminToggle, showAdmin }) => {
             <div className="footer-map-placeholder">
               <div className="footer-map-overlay">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/>
-                  <circle cx="12" cy="10" r="3"/>
+                  <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z" />
+                  <circle cx="12" cy="10" r="3" />
                 </svg>
                 <div style={{ fontSize: '0.85rem', fontWeight: '700', color: 'var(--text-white)' }}>
                   Focus Eye Care
@@ -119,14 +114,14 @@ const Footer = ({ onAdminToggle, showAdmin }) => {
                 <div style={{ fontSize: '0.75rem', marginTop: '2px' }}>
                   Durg, Chhattisgarh, India
                 </div>
-                <a 
-                  href="https://maps.google.com" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  style={{ 
-                    fontSize: '0.75rem', 
-                    color: 'var(--secondary)', 
-                    textDecoration: 'underline', 
+                <a
+                  href="https://maps.google.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    fontSize: '0.75rem',
+                    color: 'var(--secondary)',
+                    textDecoration: 'underline',
                     display: 'inline-block',
                     marginTop: '8px'
                   }}

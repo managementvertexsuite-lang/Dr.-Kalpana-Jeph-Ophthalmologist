@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FloatingCTA = () => {
   const handleScroll = (id) => {
     const element = document.getElementById(id);

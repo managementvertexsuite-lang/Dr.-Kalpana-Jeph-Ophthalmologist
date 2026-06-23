@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import retinaIcon from "../assets/icons/diabetic-retinopathy.png";
+import diabeticImg from "../assets/images/diabetic-retina.jfif";
 import './DiabeticRetina.css';
 
 const DiabeticRetina = () => {
@@ -12,7 +12,7 @@ const DiabeticRetina = () => {
 
       <div className="detail-content">
         <section className="intro-section">
-          <img src={retinaIcon} alt="Diabetic Retinopathy Icon" className="intro-image" />
+          <img src={diabeticImg} alt="Diabetic Retinopathy" className="intro-image" />
           <div className="intro-text">
             <p>
               While not everyone with diabetes will develop diabetes-related retinopathy, it's still a major risk factor for vision loss. But diabetes and diabetes-related retinopathy are both manageable. Combining regular medical care and your own efforts can go a long way to maintaining your vision.

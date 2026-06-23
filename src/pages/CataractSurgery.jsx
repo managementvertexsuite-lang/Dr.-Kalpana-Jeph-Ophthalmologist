@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import cataractIcon from "../assets/icons/cataract.png";
+import cataractImg from "../assets/images/cataract-surgery.jpg";
 import './CataractSurgery.css';
 
 const CataractSurgery = () => {
@@ -12,7 +12,7 @@ const CataractSurgery = () => {
 
       <div className="cataract-content">
         <section className="intro-section">
-          <img src={cataractIcon} alt="Cataract Surgery Icon" className="intro-image" />
+          <img src={cataractImg} alt="Cataract Surgery" className="intro-image" />
           <div className="intro-text">
             <h2>What is Cataract Surgery?</h2>
             <p>

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import glaucomaIcon from "../assets/icons/glaucoma.png";
+import glaucomaImg from "../assets/images/glaucoma.png";
 import './GlaucomaCare.css';
 
 const GlaucomaCare = () => {
@@ -12,7 +12,7 @@ const GlaucomaCare = () => {
 
       <div className="detail-content">
         <section className="intro-section">
-          <img src={glaucomaIcon} alt="Glaucoma Care Icon" className="intro-image" />
+          <img src={glaucomaImg} alt="Glaucoma Care" className="intro-image" />
           <div className="intro-text">
             <p>
               Glaucoma is a progressive eye disease caused by increased intraocular pressure (IOP) that damages the optic nerve and can eventually lead to vision loss. Managing this pressure is essential to protect remaining sight. When medications, laser therapy, or even trabeculectomy fail to adequately control eye pressure, ophthalmologists often recommend glaucoma shunt surgery as an effective alternative.

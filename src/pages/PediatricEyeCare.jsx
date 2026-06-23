@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import pediatricIcon from "../assets/icons/pedia.png";
+import pediatricImg from "../assets/images/pediatric.jpg";
 import './PediatricEyeCare.css';
 
 const PediatricEyeCare = () => {
@@ -12,7 +12,7 @@ const PediatricEyeCare = () => {
 
       <div className="detail-content">
         <section className="intro-section">
-          <img src={pediatricIcon} alt="Pediatric Eye Care Icon" className="intro-image" />
+          <img src={pediatricImg} alt="Pediatric Eye Care" className="intro-image" />
           <div className="intro-text">
             <p>
               We understand that children's vision plays a vital role in their overall development and quality of life. Our dedicated paediatric ophthalmology department specialises in diagnosing and treating eye conditions in children, ensuring they receive the best care tailored to their unique needs.

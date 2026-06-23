@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import lasikIcon from "../assets/icons/lasik.png";
+import lasikImg from "../assets/images/lasik.png";
 import './LasikSurgery.css';
 
 const LasikSurgery = () => {
@@ -12,7 +12,7 @@ const LasikSurgery = () => {
 
       <div className="detail-content">
         <section className="intro-section">
-          <img src={lasikIcon} alt="LASIK Surgery Icon" className="intro-image" />
+          <img src={lasikImg} alt="LASIK Surgery" className="intro-image" />
           <div className="intro-text">
             <p>
               LASIK is a type of refractive surgery. This kind of surgery uses a laser to treat vision problems caused by refractive errors, which are normally treated with prescription eyeglasses or contact lenses. You have a refractive error when your eye does not refract (bend) light properly.

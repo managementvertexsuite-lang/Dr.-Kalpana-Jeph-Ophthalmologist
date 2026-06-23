@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import dryeyeIcon from "../assets/icons/eye.png";
+import dryeyeImg from "../assets/images/dry-eye.jpeg";
 import './DryEyeClinic.css';
 
 const DryEyeClinic = () => {
@@ -12,7 +12,7 @@ const DryEyeClinic = () => {
 
       <div className="detail-content">
         <section className="intro-section">
-          <img src={dryeyeIcon} alt="Dry Eye Clinic Icon" className="intro-image" />
+          <img src={dryeyeImg} alt="Dry Eye Clinic" className="intro-image" />
           <div className="intro-text">
             <p>
               A continuous advancement in the digital world has led you to stay more connected to the world. This compels you to be glued to your screens, which is taking a toll on your eye health. While the technological revolution has added convenience and improved productivity in your lives, it has also attracted issues like Computer Vision Syndrome (CVS).

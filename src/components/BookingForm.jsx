@@ -51,19 +51,62 @@ const BookingForm = () => {
       return;
     }
 
+    // Validate email if provided
+    if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setErrorMsg('Please enter a valid email address');
+      setLoading(false);
+      return;
+    }
+
+    // Convert date and timeSlot to ISO 8601 datetime strings
+    const getDateTimeFromSlot = (date, slot) => {
+      const slotTimes = {
+        'Morning: 09:00 AM - 12:00 PM': { start: 9, end: 12 },
+        'Afternoon: 01:00 PM - 04:00 PM': { start: 13, end: 16 },
+        'Evening: 05:00 PM - 08:00 PM': { start: 17, end: 20 }
+      };
+
+      const slotData = slotTimes[slot];
+      if (!slotData) {
+        throw new Error('Invalid time slot');
+      }
+
+      const startDate = new Date(`${date}T${String(slotData.start).padStart(2, '0')}:00:00+05:30`);
+      const endDate = new Date(`${date}T${String(slotData.end).padStart(2, '0')}:00:00+05:30`);
+
+      return {
+        startTime: startDate.toISOString().replace('Z', '+05:30'),
+        endTime: endDate.toISOString().replace('Z', '+05:30')
+      };
+    };
+
     try {
+      const { startTime, endTime } = getDateTimeFromSlot(formData.date, formData.timeSlot);
+
+      const appointmentData = {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        date: formData.date,
+        timeSlot: formData.timeSlot,
+        service: formData.service,
+        message: formData.message,
+        startTime,
+        endTime
+      };
+
       const response = await fetch('http://localhost:5000/api/appointments', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(appointmentData)
       });
 
       const result = await response.json();
 
       if (response.ok && result.success) {
-        setSuccessMsg(result.message || 'Appointment booked successfully!');
+        setSuccessMsg(result.message || 'Appointment booked successfully! Check your email for confirmation.');
         setFormData({
           name: '',
           phone: '',
@@ -73,11 +116,15 @@ const BookingForm = () => {
           service: '',
           message: ''
         });
+        // Scroll to success message
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 500);
       } else {
-        setErrorMsg(result.message || 'Something went wrong. Please check inputs.');
+        setErrorMsg(result.message || 'Something went wrong. Please check inputs and try again.');
       }
     } catch (err) {
-      setErrorMsg('Failed to connect to server. Please ensure the backend is running.');
+      setErrorMsg('Failed to process appointment. Please ensure the backend is running.');
       console.error(err);
     } finally {
       setLoading(false);

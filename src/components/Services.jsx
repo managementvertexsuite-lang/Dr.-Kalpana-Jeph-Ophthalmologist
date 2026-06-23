@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import cataractIcon from "../assets/icons/cataract.png";
-import glaucomaIcon from "../assets/icons/glaucoma.png";
-import lasikIcon from "../assets/icons/lasik.png";
-import retinaIcon from "../assets/icons/diabetic-retinopathy.png";
-import pediatricIcon from "../assets/icons/pedia.png";
-import dryeyeIcon from "../assets/icons/eye.png";
+import cataractImg from "../assets/images/cataract-surgery.jpg";
+import glaucomaImg from "../assets/images/glaucoma.png";
+import lasikImg from "../assets/images/lasik.png";
+import diabeticImg from "../assets/images/diabetic-retina.jfif";
+import pediatricImg from "../assets/images/pediatric.jpg";
+import dryeyeImg from "../assets/images/dry-eye.jpeg";
 
 const Services = () => {
   const serviceList = [
@@ -12,42 +12,42 @@ const Services = () => {
       title: 'Advanced Cataract Surgery',
       desc: 'Micro-incision sutureless Phacoemulsification surgery with premium foldable Intraocular Lens (IOL) implantation for rapid recovery.',
       features: ['Sutureless & Suture-free', 'Topical Anesthesia (No injection)', 'Premium Monofocal & Multifocal IOLs'],
-      icon: cataractIcon,
+      icon: cataractImg,
       link: '/cataract-surgery'
     },
     {
       title: 'Glaucoma Care & Management',
       desc: 'Early detection and comprehensive control of silent vision loss through computerized field tests, applanation tonometry, and laser treatments.',
       features: ['IOP (Eye Pressure) Monitoring', 'Visual Field Analysis (Perimetry)', 'Laser Peripheral Iridotomy (YAG)'],
-      icon: glaucomaIcon,
+      icon: glaucomaImg,
       link: '/glaucoma-care'
     },
     {
       title: 'LASIK & Refractive Surgeries',
       desc: 'Modern surgical options for specs removal to achieve visual freedom. Safe, stitch-free procedures tailored for your unique eye anatomy.',
       features: ['Specs Removal consultation', 'Customized treatment plans', 'Blade-free & Safe procedures'],
-      icon: lasikIcon,
+      icon: lasikImg,
       link: '/lasik-surgery'
     },
     {
       title: 'Diabetic Retina & Floaters Evaluation',
       desc: 'Screening for retinal changes caused by Diabetes and Hypertension. Specialized examination of vitreous floaters and age-related macular changes.',
       features: ['Fundus Examination', 'Diabetic Retinopathy screening', 'Laser Retinal Photocoagulation referrals'],
-      icon: retinaIcon,
+      icon: diabeticImg,
       link: '/diabetic-retina'
     },
     {
       title: 'Pediatric Eye Care & Squint',
       desc: 'Diagnosis of childhood refractive errors, lazy eye (amblyopia), and squint evaluation, ensuring your child has the best start in learning and play.',
       features: ['Child Vision Screening', 'Squint evaluation', 'Lazy Eye (Amblyopia) therapy'],
-      icon: pediatricIcon,
+      icon: pediatricImg,
       link: '/pediatric-eye-care'
     },
     {
       title: 'Dry Eye & Computer Vision Clinic',
       desc: 'Specialized diagnostic tests for chronic dry eyes and digital screen fatigue. Customized therapy with medical management and lifestyle adjustments.',
       features: ['Tear film analysis', 'Dry Eye counseling', 'Computer Vision Syndrome guidelines'],
-      icon: dryeyeIcon,
+      icon: dryeyeImg,
       link: '/dry-eye-clinic'
     }
   ];
